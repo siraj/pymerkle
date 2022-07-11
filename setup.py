@@ -29,8 +29,8 @@ def main():
        description=pymerkle.__doc__.strip(),
        long_description=long_description,
        long_description_content_type='text/markdown',
-       packages=find_packages(),
-       # package_dir={'': 'pymerkle'},
+       packages=find_packages("pymerkle", exclude=["tests"]),
+       package_dir={'': 'pymerkle'},
        url=URL,
        project_urls={
             "github": URL,
